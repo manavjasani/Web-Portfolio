@@ -1,0 +1,494 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*---Define Variables---*/
+
+:root {
+    --primary-color: #ec407a;
+    --secondary-color: rgba(19, 198, 245, 0.84);
+    --grey-color: grey;
+    --min-font: 1rem;
+    --mid-font: 1.5rem;
+    --midmax-font: 2rem;
+    --max-font: 4rem;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/*--- For Modal window ---*/
+
+.Sub-page {
+    background-color: var(--secondary-color);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.Sub-modal {
+    display: flex;
+    flex-direction: column;
+    background: url(./images/background.png) #000 repeat;
+    width: 50%;
+    margin: auto;
+    padding: 2rem;
+}
+
+.Sub-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.Sub-header h1 {
+    word-spacing: 10px;
+}
+
+.Sub-header a {
+    text-decoration: none;
+    color: white;
+    font-size: var(--midmax-font);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.4s;
+}
+
+.Sub-header a:hover {
+    opacity: 0.7;
+}
+
+/*---Home-page---*/
+
+.Home-page {
+    width: 100%;
+}
+
+/*---Navigation-bar---*/
+
+.Navigation-bar {
+    background-color: var(--primary-color);
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+.Navigation-list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.Navigation-list li {
+    margin: 0 2rem;
+}
+
+.Navigation-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: var(--mid-font);
+    transition: all 0.3s;
+}
+.Navigation-list li a:hover {
+    color: rgb(87, 2, 54);
+    border-bottom: 3px solid rgb(87, 2, 54);
+}
+
+/*---Homepage-Intro---*/
+
+.Home-intro {
+    min-height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/homepage-background.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.Home-intro-box {
+    padding: 2.5rem;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    background: rgb(31, 30, 30);
+    letter-spacing: 3px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.Home-intro-box h1 {
+    margin: 0 0 1.5rem;
+    font-size: var(--max-font);
+    position: relative;
+    color: var(--primary-color);
+}
+
+.Home-intro-box h1::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(31, 30, 30);
+    overflow: hidden;
+    border-left: 2px solid var(--primary-color);
+    animation: animate 5s steps(10) infinite;
+}
+
+@keyframes animate {
+    90%, 100% {
+        left: 100%;
+    }
+}
+
+.Home-intro-box h2 {
+    font-size: var(--min-font);
+    line-height: 30px;
+}
+
+footer {
+    background: var(--grey-color);
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    word-spacing: 3px;
+}
+
+footer span {
+    color: black;
+    font-weight: bold;
+}
+
+/*---About-page---*/
+
+
+.About-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.About-image {
+    width: 30%;
+    height: 30%;
+}
+
+.About-image img {
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 7px solid var(--secondary-color);
+}
+
+.About-profile {
+    margin-left: 2rem;
+}
+
+.About-profile h2 {
+    font-size: var(--midmax-font);
+    word-spacing: 7px;
+    margin: 0.75rem 0;
+}
+
+.About-profile h2 span {
+    color: var(--primary-color);
+}
+
+.About-profile h3 {
+    color: var(--grey-color);
+    font-size: var(--min-font);
+    margin-bottom: 1rem;
+}
+
+.About-profile ul {
+    list-style-type: none;
+}
+
+.About-pair {
+    border-top: 2px dotted var(--secondary-color);
+    margin-top: 1.5rem;
+}
+
+.About-pair ul {
+    display: flex;
+}
+
+.About-key {
+    width: 100px;
+    font-weight: bold;
+}
+
+.About-value {
+    color: var(--grey-color);
+}
+
+.About-pair-value {
+    margin: 1rem 0;
+}
+
+.About-para {
+    letter-spacing: 1.5px;
+    line-height: 25px;
+    font-size: var(--min-font);
+}
+
+/*---Skills-page---*/
+
+
+.Skill-page {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.Skill-intro {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-width: 300px;
+    position: relative;
+}
+
+.Skill-head {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    color: var(--secondary-color);
+}
+
+.Skill-head i {
+    font-size: var(--midmax-font);
+    margin-right: 1rem;
+}
+
+.Skill-head h2 {
+    word-spacing: 8px;
+}
+
+.Skill-group {
+    border-top: 2px dotted var(--grey-color);
+}
+
+.Skill-group h3 {
+    margin: 1.5rem 0;
+}
+
+/*---Profile-page---*/
+
+
+.Profile-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.Profile-link {
+    list-style-type: none;
+    font-size: var(--mid-font);
+}
+
+.Profile-link li {
+    margin: 1rem 0;
+    color: rgb(170, 158, 158);
+}
+
+.Profile-link li:hover {
+    opacity: 0.7;
+}
+
+.Profile-link a {
+    text-decoration: none;
+    color: var(--grey-color);
+    margin-left: 1.5rem;
+}
+
+/*---Contact-form---*/
+
+
+.Contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.Contact-form form {
+    width: 40%;
+    margin: 1.5rem 0;
+}
+
+.Contact-map {
+    width: 50%;
+    min-width: 300px;
+}
+
+.Contact-part {
+    display: flex;
+    flex-direction: column;
+}
+
+.Contact-part div {
+    margin: 1rem 0;
+}
+
+.Contact-part label {
+    display: block;
+    color: var(--secondary-color);
+}
+
+.Contact-part input, .Contact-part textarea {
+    border: none;
+    background: transparent;
+    width: 100%;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: var(--min-font);
+    padding: 0.5rem 0;
+}
+
+.Contact-part input:focus, .Contact-part textarea:focus {
+    outline: none;
+}
+
+.Contact-form button {
+    width: 7rem;
+    height: 2rem;
+    background: var(--primary-color);
+    font-size: var(--min-font);
+    border: none;
+    color: white;
+    transition: all 0.3s;
+    margin-top: 2.5rem;
+}
+
+.Contact-form button:hover {
+    background: var(--secondary-color);
+}
+
+
+
+/*---Media-Query---*/
+
+
+@media screen and (max-width: 1130px) {
+    .Contact-map {
+        width: 90%;
+        margin: auto;
+    }
+    .Contact-form form {
+        width: 80%;
+        margin: 1.5rem auto 0;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .Skill-intro {
+        width: 100%;
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .Sub-modal {
+        width: 95%;
+        padding: 3px;
+    }
+    .About-section {
+        flex-direction: column;
+    }
+    .About-para {
+        letter-spacing: 0.5px;
+        line-height: 15px;
+        font-size: 0.9rem;
+    }
+    .Profile-link li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .Navigation-list li {
+        margin: 0 1rem;
+    }
+    .Home-intro-box {
+        padding: 1.5rem;
+        bottom: 10%;
+        left: 2%;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .About-pair-value ul{
+        flex-direction: column;
+    }
+
+    .Navigation-list {
+        flex-direction: column;
+    }
+
+    .Navigation-list li {
+        margin: 0.5rem 0;
+    }
+
+    .Home-intro-box {
+        padding: 1rem;
+        bottom: 10%;
+        left: 2%;
+        letter-spacing: 1px;
+    }
+
+    .Home-intro-box h1 {
+        margin: 0 0 0.5rem;
+        font-size: var(--mid-font);
+    }
+    
+    .Home-intro-box h2 {
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .Profile-link a {
+        font-size: var(--min-font);
+    }
+}
+
+@media screen and (max-height: 350px) {
+    .Home-intro-box {
+        padding: 0.7rem;
+        bottom: 5%;
+        left: 2%;
+        letter-spacing: 1px;
+    }
+
+    .Home-intro-box h1 {
+        margin: 0 0 0.5rem;
+        font-size: var(--mid-font);
+    }
+}
